@@ -98,6 +98,9 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-title-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link:hover,
 .header-link:focus {
@@ -113,6 +116,9 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-address-list {
   display: flex;
@@ -174,7 +180,11 @@ img {
   padding: 16px 32px;
   margin: 0 auto;
   border: none;
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .hero-btn:hover,
 .hero-btn:focus {
   background: #404bbf;
@@ -318,6 +328,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-link:hover,
@@ -339,6 +352,9 @@ img {
 
 .compani-icon {
   fill: #8e8f99;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .compani-icon:hover,
@@ -379,6 +395,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .compani-link:hover,
@@ -464,6 +483,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-soc-link:hover,
@@ -507,6 +529,9 @@ img {
   padding-right: 24px;
   padding-top: 12px;
   padding-bottom: 12px;
+  transition-property: color, background-color, box-shadow, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-navigation-btn:hover,
 .main-navigation-btn:focus {
