@@ -29,13 +29,13 @@
           </a>
           <ul class="header-list list">
             <li class="header-item">
-              <a class="header-link link" href="./index.html">Studio</a>
+              <a class="header-link link curent" href="./index.html">Studio</a>
             </li>
             <li class="header-item">
-              <a class="header-link link" href="./portfolio.html">Portfolio</a>
+              <a class="header-link link " href="./portfolio.html">Portfolio</a>
             </li>
             <li class="header-item">
-              <a class="header-link link" href="">Contacts</a>
+              <a class="header-link link " href="">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -63,7 +63,9 @@
         <div class="container container-hero">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
 
-          <button class="hero-btn" type="button">Order Service</button>
+          <button class="hero-btn" data-modal-open type="button">
+            Order Service
+          </button>
         </div>
       </section>
       <section class="about">
@@ -347,25 +349,6 @@
         <div class="container">
           <h2 class="compani-top-text">Customers</h2>
           <ul class="compani-list list">
-            <!-- <li class="compani-logo">
-              <img src="./images/compani.svg" alt="compami-logo" />
-            </li>
-            <li class="compani-logo">
-              <img src="./images/compani 1.svg" alt="compami-logo1" />
-            </li>
-            <li class="compani-logo">
-              <img src="./images/compani 2.svg" alt="compami-logo2" />
-            </li>
-            <li class="compani-logo">
-              <img src="./images/compani 3.svg" alt="compami-logo3" />
-            </li>
-            <li class="compani-logo">
-              <img src="./images/compani 4.svg" alt="compami-logo4" />
-            </li>
-            <li class="compani-logo">
-              <img src="./images/compani 5.svg" alt="compami-logo5" />
-            </li> -->
-
             <li class="compani-logo">
               <a href="" class="compani-link link">
                 <svg class="compani-icon" width="104" height="54">
@@ -459,5 +442,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" data-modal-close class="modal-close-btn">
+          <svg class="close-btn-vector" width="8" height="8">
+            <use href="./images/Vector.svg#icon-Vector"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -190,6 +190,21 @@ img {
   background: #404bbf;
 }
 
+.curent {
+  position: relative;
+}
+
+.curent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+  bottom: -20px;
+}
+
 /* -----ABOUT----- */
 
 .about {
@@ -569,6 +584,30 @@ img {
   width: 360px;
 }
 
+.images-cover-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.images-navigation-text {
+  position: absolute;
+  top: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  background: #4d5ae5;
+  mix-blend-mode: normal;
+  padding: 40px;
+
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .main-navigation-item:hover,
 .main-navigation-item:focus {
   display: flex;
@@ -579,9 +618,8 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.main-navigation-link {
-}
-.link {
+.main-navigation-link:hover .images-navigation-text {
+  transform: translate(0);
 }
 
 .main-navigation-title {
@@ -607,4 +645,56 @@ img {
   border-right: 1px solid #e7e9fc;
   border-bottom: 1px solid #e7e9fc;
   padding-left: 16px;
+}
+
+/* --------backdrop------- */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+  transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.modal {
+  width: 408px;
+  min-height: 576px;
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms linear;
+  padding: 24px;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-close-btn {
+  width: 24px;
+  height: 24px;
+  background: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  display: flex;
+}
+.close-btn-vector {
+  fill: #2e2f42;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
